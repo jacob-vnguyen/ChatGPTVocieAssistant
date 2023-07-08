@@ -33,7 +33,7 @@ def speak_text(text):
 
 def main():
     while True:
-        print("Say 'Genius to start recoridng your question...")
+        print("Say 'Hello' to start recoridng your question...")
         with sr.Microphone() as source:
             recognizer = sr.Recognizer()
             audio = recognizer.listen(source)
@@ -41,7 +41,7 @@ def main():
                 transcription = recognizer.recognize_google(audio)
                 if transcription.lower() == "genius":
                     filename = "input.wav"
-                    print("Say your question: ")
+                    print("Please ask your question: ")
                     with sr.Microphone() as source:
                         recognizer = sr.Recognizer()
                         source.pause_threshold = 1
